@@ -2,7 +2,7 @@ function playerSelectFunction(xyz) {
   const player = xyz.previousElementSibling.textContent;
   const liQ = document.querySelector('ol').childElementCount;
 
-  if(liQ < 5) {
+  if(liQ < 5) { 
       const ol = document.querySelector('ol');
       const li = document.createElement('li');
       li.textContent = player;
