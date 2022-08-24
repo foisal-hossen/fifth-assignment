@@ -1,3 +1,4 @@
+
 function playerSelectFunction(xyz) {
   const player = xyz.previousElementSibling.textContent;
   const liQ = document.querySelector('ol').childElementCount;
@@ -7,11 +8,14 @@ function playerSelectFunction(xyz) {
       const li = document.createElement('li');
       li.textContent = player;
       ol.appendChild(li);
-      xyz.setAttribute('disabled', 'true');
-  } else {
+    xyz.setAttribute('disabled', 'true');
+    xyz.style.backgroundColor = 'gray';
+  }
+  else {
       alert('You can select only five players.');
   }
 }
+
 
 document.getElementById('cal-btn').addEventListener('click', function() {
   const perPlayer = parseInt(document.getElementById('per-player').value);
